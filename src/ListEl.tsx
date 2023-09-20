@@ -18,7 +18,7 @@ export function ListEl(props: Props) {
   const dataFilteredBySearch = !search
     ? dataFilteredByWA
     : dataFilteredByWA.filter((d: any) =>
-        d.IndicatorLabelTable.toLowerCase().includes(search.toLowerCase()),
+        d.IndicatorLabel.toLowerCase().includes(search.toLowerCase()),
       );
   return (
     <div>
@@ -32,7 +32,7 @@ export function ListEl(props: Props) {
           style={{ width: '100%', backgroundColor: 'var(--gray-200)' }}
         >
           <div style={{ padding: 'var(--spacing-09)' }}>
-            <h6 className='undp-typography'>{d.IndicatorLabelTable}</h6>
+            <h6 className='undp-typography'>{d.IndicatorLabel}</h6>
             <p className='undp-typography'>{d.IndicatorDescription}</p>
             <div className='margin-top-07'>
               <h6 className='undp-typography'>Signature Solutions</h6>
